@@ -1,0 +1,61 @@
+version: "2.0"
+
+stories:
+
+  #- story: happy path
+  #  steps:
+    #  - intent: greet
+    #  - action: utter_greet
+    #  - intent: mood_great
+    #  - action: utter_happy
+    #  - action: utter_tanya_bantuan
+
+
+    #- story: sad path 1
+  #  steps:
+    #  - intent: greet
+    #  - action: utter_greet
+    #  - intent: mood_unhappy
+    #  - action: utter_cheer_up
+    #  - action: utter_tanya_bantuan
+
+    #- story: sad path 2
+    #  steps:
+    #  - intent: greet
+    #  - action: utter_greet
+    #  - intent: mood_unhappy
+    #  - action: utter_cheer_up
+    #  - action: tanya_bantuan
+
+- story: untuk umum senang
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_name
+  - action: name_form
+  - active_loop: name_form
+
+- story: untuk umum sedih
+  steps: 
+  - action: utter_kabar
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_tanya_bantuan
+
+- story: untuk umum sedih
+  steps:
+    #  - intent: greet
+    #  - action: utter_name
+    #  - action: name_form
+    #  - active_loop: name_form
+  - action: utter_kabar
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_tanya_bantuan
+
+
+
+
+
+
+
